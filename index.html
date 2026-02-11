@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Will You Be My Valentine?</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#fff;
+    font-family:Arial, sans-serif;
+}
+
+/* Main Card */
+.container{
+    background:#fff;
+    width:360px;
+    padding:30px 20px;
+    border-radius:15px;
+    text-align:center;
+    border:2px solid red;
+}
+
+/* Cat Emoji */
+.cat{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+/* Main Text */
+h2{
+    font-size:20px;
+    font-weight:normal;
+    margin-bottom:25px;
+    color:black;
+}
+
+/* Buttons Area */
+.buttons{
+    position:relative;
+    height:50px;
+}
+
+/* Buttons */
+button{
+    font-size:16px;
+    padding:10px 25px;
+    border-radius:25px;
+    border:none;
+    cursor:pointer;
+}
+
+/* Yes Button */
+#yes{
+    background:red;
+    color:white;
+}
+
+/* No Button */
+#no{
+    background:white;
+    color:black;
+    border:1px solid red;
+    position:absolute;
+    right:0;
+    transition:0.3s;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="cat">🐱❤️</div>
+
+    <h2>Cherubina will you be my valentine?</h2>
+
+    <div class="buttons">
+
+        <button id="yes">Yes</button>
+
+        <button id="no" onmouseover="moveNo()">No</button>
+
+    </div>
+
+</div>
+
+<script>
+
+let move = false;
+
+function moveNo(){
+
+    const btn = document.getElementById("no");
+
+    if(move === false){
+        btn.style.right = "200px";
+        move = true;
+    }else{
+        btn.style.right = "0px";
+        move = false;
+    }
+}
+
+</script>
+
+</body>
+</html>
